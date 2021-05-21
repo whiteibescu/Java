@@ -9,15 +9,15 @@ public class Day03_02 {
 
         Scanner scanner = new Scanner(System.in);
 
-        InputArray(arr, scanner);
-        PrintArray(arr, scanner);
-
+/*        InputArray(arr, scanner);
+        PrintArray(arr, scanner);*/
+        LectureCoding(arr, scanner);
 
     }
 
     public static void InputArray(int[] arr, Scanner scanner)
     {
-        for (int i = 0; i < 10; ++i)
+        for (int i = 0; i < arr.length; ++i)
         {
             arr[i] = scanner.nextInt();
         }
@@ -30,5 +30,29 @@ public class Day03_02 {
             System.out.println(arr[i]);
         }
     }
+
+    public static void LectureCoding(int[] arr, Scanner scanner)
+    {
+        boolean isQuit = false;
+        for (int i = 0; !isQuit && i < arr.length; ++i)
+        while(true)
+        {
+            try {
+                System.out.format("Input arr[%d]: ", i);
+                String str = scanner.next();
+                if (str.equals("quit")){
+                    isQuit = true;
+                    break;
+                }
+                int val = Integer.parseInt(str);
+                arr[i] = val;
+                break;
+            } catch (Exception e)
+            {
+                // error handling
+            }
+        }
+    }
+
 
 }

@@ -11,8 +11,7 @@ public class Day03_02 {
 
 /*        InputArray(arr, scanner);
         PrintArray(arr, scanner);*/
-        LectureCoding(arr, scanner);
-
+/*        LectureCoding(arr, scanner);*/
     }
 
     public static void InputArray(int[] arr, Scanner scanner)
@@ -52,6 +51,27 @@ public class Day03_02 {
                 // error handling
             }
         }
+
+    }
+
+    public static void TickTackToe()
+    {
+        final int BLACK = 0;
+        final int PLAYER_0 = 1;
+        final int Player_X = 2;
+
+        final int WIDTH = 3;
+        final int HEIGHT = 3;
+
+        int[] arr = new int[WIDTH * HEIGHT];
+
+
+        System.out.println("0 |   | X");
+        System.out.println("0 | X | X");
+        System.out.println("0 | X | X");
+
+        System.out.println("\nPlayer [1] (x, y)> ") ;
+        System.out.println("\nPlayer [2] (x, y)> ") ;
     }
 
 

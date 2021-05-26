@@ -69,21 +69,34 @@ public class Main {
 
         while (!isQuit) {
             printBoard(board);
+            if(curPlayer == PLAYER_X)
+            {
+                boolean hasUpdated = false;
+                while(!hasUpdated) {
+                    Position nextPos = getPosFromUser(curPlayer);
 
-            boolean hasUpdated = false;
-            while(!hasUpdated) {
-                Position nextPos = getPosFromUser(curPlayer);
-
-                // update board
-                int item = getBoardItem(nextPos);
-                if(item == BLANK) {
-                    setBoardItem(nextPos, curPlayer);
-                    hasUpdated = true;
-                }
-                else  {
-                    System.out.println("Already has stone.");
+                    // update board
+                    int item = getBoardItem(nextPos);
+                    if(item == BLANK) {
+                        setBoardItem(nextPos, curPlayer);
+                        hasUpdated = true;
+                    }
+                    else  {
+                        System.out.println("Already has stone.");
+                    }
                 }
             }
+            else { //PLAYER_0
+                for (int i = 0; i < board.length; ++i)
+                {
+                    if(board[i] == BLANK)
+                    {
+                        Postion pos = new Position(x: i%3,)
+                    }
+                }
+
+            }
+
 
             boolean isWin = checkWin(curPlayer);
             if(isWin) {
